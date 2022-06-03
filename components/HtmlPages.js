@@ -3,7 +3,7 @@ import { Text, View, FlatList , ActivityIndicator, Pressable, Modal, Platform, I
 import styles from './Styles';
 import WebView from 'react-native-webview';
 import Swipeable from './Swipeable';
-import Profile from './Profile';
+import Header from './Header';
 import pageIcon from '../assets/page.png';
 
 export default function HtmlPages(props){
@@ -41,7 +41,7 @@ export default function HtmlPages(props){
         >              
           <Text style={styles.title}>{props.category.name}</Text>
         </Swipeable>
-        <Profile {...props}/>
+        <Header {...props}/>
       </View>
       {htmlPages &&         
         <FlatList
@@ -89,7 +89,7 @@ export default function HtmlPages(props){
               >              
                 <Text style={styles.title}>{htmlPage.title}</Text>
               </Swipeable>
-              <Profile {...props}/>
+              <Header {...props}/>
             </View>
             {Platform.OS !== "web" &&
               <WebView source={{ uri: `${props.apiURI}/html/${htmlPage.id}` }}/>

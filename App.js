@@ -1,14 +1,26 @@
 import React from 'react';
-import Categories from './components/Categories';
 import Login from './components/Login';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { ActivityIndicator } from 'react-native';
+import Home from './components/Home';
+import Categories from './components/Categories';
+import Feelings from './components/Feelings';
+import Profile from './components/Profile';
 
 export default function App() {
-  const apiURI = "https://xiny.ca";
-  //const apiURI = "http://localhost:3000";
+  //const apiURI = "https://xiny.ca";
+  const apiURI = "http://localhost:3000";
   const [user, setUser] = React.useState();
+  const [page, setPage] = React.useState("home");
   const [loading, setLoading] = React.useState(true);
+
+  const props = {
+    apiURI:apiURI,
+    user:user,
+    setUser:setUser,
+    page:page,
+    setPage:setPage,
+  }
 
   React.useEffect(() => {
     const fetchData = async ()=>{
@@ -44,13 +56,30 @@ export default function App() {
   }
   else{
     if(user){
-      return (
-        <Categories apiURI={apiURI} user={user} setUser={setUser}/>
-      );
+      if(page==="home"){
+        return (
+          <Home {...props}/>
+        );
+      }
+      else if(page==="categories"){
+        return (
+          <Categories {...props}/>
+        );
+      }
+      else if(page==="feelings"){
+        return (
+          <Feelings {...props}/>
+        );
+      }
+      else if(page==="profile"){
+        return (
+          <Profile {...props}/>
+        );
+      }
     }
     else{
       return (
-        <Login apiURI={apiURI} user={user} setUser={setUser}/>
+        <Login {...props}/>
       );
     }
   }

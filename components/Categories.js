@@ -1,13 +1,13 @@
 import React from 'react';
-import { Text, View, FlatList , ActivityIndicator, Pressable, Modal, RefreshControl, Image } from 'react-native';
+import { Text, View, FlatList , ActivityIndicator, Pressable, Modal, RefreshControl, Image, ScrollView } from 'react-native';
 import HtmlPages from './HtmlPages';
 import styles from './Styles';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import PushNotifications from './PushNotifications';
 import Swipeable from './Swipeable';
-import Profile from './Profile';
+import Header from './Header';
 import folderIcon from '../assets/folder.png';
-//import { Bar, Pie } from './Charts';
+import Footer from './Footer';
 
 export default function Categories(props){
   const [categories, setCategories] = React.useState();
@@ -42,7 +42,7 @@ export default function Categories(props){
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>XinY</Text>
-        <Profile {...props}/>
+        <Header {...props}/>
       </View>
       <PushNotifications {...props} setNotification={setNotification}/>
       {notification &&
@@ -136,7 +136,7 @@ export default function Categories(props){
         />
       }
       {!categories && 
-        <ActivityIndicator/>
+        <ScrollView><ActivityIndicator/></ScrollView>        
       }
       {hiddenCategories &&
         <Pressable style={styles.centeredButton}
@@ -160,69 +160,7 @@ export default function Categories(props){
             <HtmlPages {...props} category={category} setCategory={setCategory}/>
         </Modal>
       }
-      
-      {/* <Bar 
-        interval={10}
-        height={150}
-        data={[
-          {
-            label:"Sunday",
-            values: [10,9,10,9,8,7]
-          },
-          {
-            label:"Monday",
-            values: [10,9,10,9,8,7]
-          },
-          {
-            label:"Tuesday",
-            values: [1,2,3,4,5,6]
-          },
-          {
-            label:"Wednesday",
-            values: [10,9,10,9,8,7]
-          },
-          {
-            label:"Thursday",
-            values: [6,5,4,3,2,1]
-          },
-          {
-            label:"Friday",
-            values: [10,9,10,9,8,7]
-          },
-          {
-            label:"Saturday",
-            values: [5,6,7,8,9,10]
-          },
-        ]}
-      />
-      <Pie 
-        data={[
-          {
-            label:"Purpose",
-            value: 1
-          },
-          {
-            label:"Thinking",
-            value: 2
-          },
-          {
-            label:"Feelings",
-            value: 3
-          },
-          {
-            label:"Environment",
-            value: 4
-          },
-          {
-            label:"Physical",
-            value: 5
-          },
-          {
-            label:"Moving",
-            value: 6
-          },
-        ]}
-      /> */}
+      <Footer {...props}/>
     </View>
   );
 }

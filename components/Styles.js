@@ -28,7 +28,7 @@ export default StyleSheet.create({
     textAlignVertical: 'center',
     textAlign: 'center',
     flexDirection: 'row',
-    backgroundColor: "#2196F3",
+    backgroundColor: "#2b3362",
     zIndex: 2,
     elevation: 2,
   },
@@ -36,11 +36,11 @@ export default StyleSheet.create({
     fontSize:25,
     padding: 20,
     height: 80,
-    backgroundColor: "#2196F3",
+    backgroundColor: "#2b3362",
     color: "#FFFFFF",
   },
   titleSwipe: {
-    color: "#2196F3",
+    color: "#2b3362",
     backgroundColor: "#FFFFFF",
     width: 100,
     height: 80,
@@ -66,12 +66,11 @@ export default StyleSheet.create({
     top: 0,
     right: 0,
     alignItems: 'flex-end',
-    width: 100,
   },
   menu: {
     fontSize: 20,
     padding: 10,
-    backgroundColor: "#2196F3",
+    backgroundColor: "#2b3362",
     color: "#FFFFFF",
   },
   input: {
@@ -81,7 +80,7 @@ export default StyleSheet.create({
     padding: 10,
   },
   centeredButton: {
-    backgroundColor: "#2196F3",
+    backgroundColor: "#FFFFFF",
     justifyContent: 'center',
     alignItems: 'center',
     color: "#FFFFFF",
@@ -112,7 +111,7 @@ export default StyleSheet.create({
     elevation: 1
   },
   swipeLeft: {
-    backgroundColor: "#2196F3",
+    backgroundColor: "#2b3362",
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 15,
     borderTopLeftRadius: 0,
@@ -126,7 +125,7 @@ export default StyleSheet.create({
     opacity: 0.5,
   },
   swipeRight: {
-    backgroundColor: "#2196F3",
+    backgroundColor: "#2b3362",
     borderBottomLeftRadius: 15,
     borderBottomRightRadius: 0,
     borderTopLeftRadius: 15,
@@ -152,7 +151,7 @@ export default StyleSheet.create({
     height: 60,
   },
   paperSwipe: {
-    backgroundColor: "#2196F3",
+    backgroundColor: "#2b3362",
     width: 100,
     height: 60,
     justifyContent: 'center',
@@ -166,5 +165,28 @@ export default StyleSheet.create({
     textAlignVertical: 'center',
     textAlign: 'center',
     flexDirection: 'row',
+  },
+  footer: {
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
+    borderTopLeftRadius: 25,
+    borderTopRightRadius: 25,
+    backgroundColor: "#2b3362",
+    paddingTop: 10,
+    paddingBottom: 30,
+    color:"#FFFFFF"
+  },
+  cardContainer: {
+    borderRadius: 15,
+    margin: 5,
+    backgroundColor: "#FFFFFF",
+    padding: 10
+  },
+  button: {
+    backgroundColor:'#2b3362', 
+    color:'#FFFFFF', 
+    paddingVertical:5, 
+    paddingHorizontal:20, 
+    borderRadius:10
   },
 });
