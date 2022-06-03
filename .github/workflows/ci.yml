@@ -33,6 +33,5 @@ jobs:
       - name: Deploy
         run: |
           npm install -g expo-cli
-          export NODE_OPTIONS=--openssl-legacy-provider
           npx expo signin -u rayyzw -p X1nY@expo
           npx expo publish
