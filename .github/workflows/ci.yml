@@ -26,11 +26,6 @@ jobs:
 
       - name: ESLint
         run: npx eslint
-
-      - name: Build
-        run: |
-          npx prisma generate
-          npx prisma migrate deploy
           
       - name: Build
         run: npx expo build
