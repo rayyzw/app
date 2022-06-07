@@ -187,6 +187,9 @@ export default StyleSheet.create({
     color:'#FFFFFF', 
     paddingVertical:5, 
     paddingHorizontal:20, 
-    borderRadius:10
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
   },
 });

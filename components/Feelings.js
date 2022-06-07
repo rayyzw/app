@@ -131,7 +131,7 @@ export default function Feelings(props){
           </View>
           <Text>{' '}</Text>
           <View style={styles.flexCenter}>
-            <Pressable onPress={async ()=>{  
+            <Pressable style={styles.button} onPress={async ()=>{  
               let res1 = await fetch(`${props.apiURI}/api/feelings`,{
                 method:"POST",
                 headers: new Headers({"Content-Type": "application/json",Accept: "application/json","Token":props.user.token}),
@@ -144,10 +144,10 @@ export default function Feelings(props){
                 alert("Can't save!");
               }
             }}>
-              <Text style={styles.button}>Save</Text>
+              <Text style={{color:'#FFFFFF'}}>Save</Text>
             </Pressable>
-            <Text>{' '}</Text>
-            <Pressable onPress={()=>{
+            <Text>{'    '}</Text>
+            <Pressable style={styles.button} onPress={()=>{
               setFeeling({
                 date:today,
                 purpose:0,
@@ -158,7 +158,7 @@ export default function Feelings(props){
                 moving:0
               });
             }}>
-              <Text style={styles.button}>Reset</Text>
+              <Text style={{color:'#FFFFFF'}}>Reset</Text>
             </Pressable>
           </View>    
         </View>

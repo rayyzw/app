@@ -8,8 +8,8 @@ import Feelings from './components/Feelings';
 import Profile from './components/Profile';
 
 export default function App() {
-  //const apiURI = "https://xiny.ca";
-  const apiURI = "http://localhost:3000";
+  const apiURI = "https://xiny.ca";
+  //const apiURI = "http://localhost:3000";
   const [user, setUser] = React.useState();
   const [page, setPage] = React.useState("home");
   const [loading, setLoading] = React.useState(true);
