@@ -9,7 +9,7 @@ import { Rating } from 'react-native-ratings';
 
 export default function Feelings(props){
   const windowWidth = Dimensions.get('window').width;
-  const windowHeight = Dimensions.get('window').height;
+  //const windowHeight = Dimensions.get('window').height;
   const today = new Date();
   const months = {1:'Jan',2:'Feb',3:'Mar',4:'Apr',5:'May',6:'Jun',7:'Jul',8:'Aug',9:'Sep',10:'Oct',11:'Nov',12:'Dec'};
   const daysOfWeek = {0:'Sun',1:'Mon',2:'Tue',3:'Wed',4:'Thu',5:'Fri',6:'Sat'};
@@ -163,7 +163,7 @@ export default function Feelings(props){
           </View>    
         </View>
         <View style={styles.cardContainer}>
-          <Text style={styles.item}>Today's Energy Status</Text>
+          <Text style={styles.item}>Today&apos;s Energy Status</Text>
           <View style={styles.flexCenter}>
             {feelingsPercentage>0 && feelingsPercentage<20 && 
               <>
@@ -218,7 +218,7 @@ export default function Feelings(props){
           </View>
         </View>
         <View style={styles.cardContainer}>
-          <Text style={styles.item}>Today's Last Recorded</Text>
+          <Text style={styles.item}>Today&apos;s Last Recorded</Text>
           {feelingsLatest &&
             <View style={{padding:10}}>
               <Svg width={windowWidth-70} height={10}>

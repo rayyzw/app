@@ -92,7 +92,7 @@ export function BarChart(props){
       </G>
       {data && data.map((d,i)=>(
         <>
-        <Text fill="blue" fontSize={14} x={leftWidth + i*xInterval} y={positiveHeight+15} transform={`rotate(0 ${i*xInterval} ${positiveHeight+15})`}>{d.label}</Text>
+        <Text key={i} fill="blue" fontSize={14} x={leftWidth + i*xInterval} y={positiveHeight+15} transform={`rotate(0 ${i*xInterval} ${positiveHeight+15})`}>{d.label}</Text>
         {d.values && d.values.map((v,iv)=>(          
           <Rect
             key={iv}

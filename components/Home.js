@@ -28,8 +28,6 @@ export default function Home(props){
       });
       setMarkedDates(md);
     }
-    else{
-    }
   };
 
   React.useEffect(() => {
