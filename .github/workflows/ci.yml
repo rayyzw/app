@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: ESLint
-        run: npx eslint
+        run: npx eslint .
           
       - name: Build
         run: npx expo build
